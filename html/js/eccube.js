@@ -507,15 +507,20 @@
 
         // 販売価格
         var $price02_default = $form.find('[id^=price02_default]');
-        var $price02_dynamic = $form.find('[id^=price02_dynamic]');
-        if (classcat2 && typeof classcat2.price02 !== 'undefined' && String(classcat2.price02).length >= 1) {
-
-            $price02_dynamic.text(classcat2.price02).show();
-            $price02_default.hide();
-        } else {
-            $price02_dynamic.hide();
-            $price02_default.show();
-        }
+var $price02_dynamic = $form.find('[id^=price02_dynamic]');
+var $price021_default = $form.find('[id^=price021_default]');
+var $price021_dynamic = $form.find('[id^=price021_dynamic]');
+if (classcat2 && typeof classcat2.price02 !== 'undefined' && String(classcat2.price02).length >= 1) {
+  $price02_dynamic.text(classcat2.price02).show();
+  $price021_dynamic.text(classcat2.price021).show();
+  $price02_default.hide();
+  $price021_default.hide();
+} else {
+  $price02_dynamic.hide();
+  $price02_default.show();
+  $price021_dynamic.hide();
+  $price021_default.show();
+}
 
         // ポイント
         var $point_default = $form.find('[id^=point_default]');

@@ -59,6 +59,29 @@
         // 商品別のフォームを送信
         cartForm.submit();
     }
+
+
+    jQuery(function($) {
+$('div#undercolumn form[name^="product_form"], body.LC_Page_Products_Detail #form1').change(function() {
+    var inctax = $(this).find('span[id^="price02_dynamic"]');
+    var noinctax_f = $(this).find('span[id^="price02no_default"]');
+    var noinctax_y = $(this).find('span[id^="price02no_dynamic"]');
+
+    if ( inctax.is(":visible") ) {
+        //console.log('計算したよー');
+        var inctax_text = inctax.text();
+        var inctax_value = inctax_text.replace(',','');
+        var noinctax_value = Math.floor(inctax_value / 1.08);
+        var noinctax_value = String( noinctax_value ).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,'); // http://so-zou.jp/web-app/tech/programming/javascript/grammar/data-type/string/comma-formatting.htm
+        noinctax_f.hide();
+        noinctax_y.show().text(noinctax_value);
+    } else {
+        //console.log('計算やめたー');
+        noinctax_f.show();
+        noinctax_y.hide();
+    }
+});
+});
 //]]></script>
 
 <div id="undercolumn" class="margin-section">
@@ -179,19 +202,30 @@
                                 </h3>
                             </div>
                             <!--★価格★-->
-                            <div class="pricebox sale_price">
-                                <!--{$smarty.const.SALE_PRICE_TITLE}-->(税込)：
-                                <span class="price">
-                                    <span id="price02_default_<!--{$id}-->"><!--{strip}-->
-                                        <!--{if $arrProduct.price02_min_inctax == $arrProduct.price02_max_inctax}-->
-                                            <!--{$arrProduct.price02_min_inctax|n2s}-->
-                                        <!--{else}-->
-                                            <!--{$arrProduct.price02_min_inctax|n2s}-->～<!--{$arrProduct.price02_max_inctax|n2s}-->
-                                        <!--{/if}-->
-                                    </span><span id="price02_dynamic_<!--{$id}-->"></span><!--{/strip}-->
-                                    円</span>
-                            </div>
-                            
+                            <div class="pricebox sale_price sale_price_inctax">
+    <!--{$smarty.const.SALE_PRICE_TITLE}-->(税込)：
+    <span class="price">
+        <span id="price02_default_<!--{$id}-->"><!--{strip}-->
+            <!--{if $arrProduct.price02_min_inctax == $arrProduct.price02_max_inctax}-->
+                <!--{$arrProduct.price02_min_inctax|number_format}-->
+            <!--{else}-->
+                <!--{$arrProduct.price02_min_inctax|number_format}-->～<!--{$arrProduct.price02_max_inctax|number_format}-->
+            <!--{/if}-->
+        </span><span id="price02_dynamic_<!--{$id}-->"></span><!--{/strip}-->
+        円</span>
+</div>
+<div class="pricebox sale_price sale_price_noinctax">
+    <!--{$smarty.const.SALE_PRICE_TITLE}-->(税抜)：
+    <span class="price">
+        <span id="price02no_default_<!--{$id}-->"><!--{strip}-->
+            <!--{if $arrProduct.price02_min == $arrProduct.price02_max}-->
+                <!--{$arrProduct.price02_min|number_format}-->
+            <!--{else}-->
+                <!--{$arrProduct.price02_min|number_format}-->～<!--{$arrProduct.price02_max|number_format}-->
+            <!--{/if}-->
+        </span><span id="price02no_dynamic_<!--{$id}-->"></span><!--{/strip}-->
+        円</span>
+</div>
 
                             <!--★コメント★-->
                             <div class="listcomment"><!--{$arrProduct.main_list_comment|h|nl2br}--></div>

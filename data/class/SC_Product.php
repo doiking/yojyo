@@ -303,6 +303,19 @@ __EOS__;
                     ? number_format(SC_Helper_TaxRule_Ex::sfCalcIncTax($arrProductsClass['price02'], $productId, $arrProductsClass['product_class_id']))
                     : '';
 
+
+                    //  税抜価格を表示させるために追加 start
+ $arrClassCats2['price011']
+       = strlen($arrProductsClass['price01'])
+        ? number_format($arrProductsClass['price01'])
+       : '';
+
+$arrClassCats2['price021']
+       = strlen($arrProductsClass['price02'])
+       ? number_format($arrProductsClass['price02'])
+       : '';
+ //end
+
                 // ポイント
                 $arrClassCats2['point']
                     = number_format(SC_Utils_Ex::sfPrePoint($arrProductsClass['price02'], $arrProductsClass['point_rate']));
@@ -404,10 +417,10 @@ __EOS__;
 
         // 税込計算
         if (!SC_Utils_Ex::isBlank($arrProduct['price01'])) {
-            $arrProduct['price01_inctax'] = SC_Helper_TaxRule_Ex::sfCalcIncTax($arrProduct['price01'], $arrProduct['product_id'], $productClassId);        
+            $arrProduct['price01_inctax'] = SC_Helper_TaxRule_Ex::sfCalcIncTax($arrProduct['price01'], $arrProduct['product_id'], $productClassId);
         }
         if (!SC_Utils_Ex::isBlank($arrProduct['price02'])) {
-            $arrProduct['price02_inctax'] = SC_Helper_TaxRule_Ex::sfCalcIncTax($arrProduct['price02'], $arrProduct['product_id'], $productClassId);        
+            $arrProduct['price02_inctax'] = SC_Helper_TaxRule_Ex::sfCalcIncTax($arrProduct['price02'], $arrProduct['product_id'], $productClassId);
         }
 
         return $arrProduct;

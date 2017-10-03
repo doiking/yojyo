@@ -104,24 +104,19 @@
                             <!--{/if}-->
 
                             <!--★販売価格★-->
-                            <dl class="sale_price dl-horizontal">
-                                <dt><!--{$smarty.const.SALE_PRICE_TITLE}-->(税込)：</dt>
-                                <dd class="price">
-                                    <span id="price02_default">
-
-                                      <!--{assign var=tax_price value=$arrProduct.price02_min_inctax-$arrProduct.price02_min}-->
-<!--{$tax_price|number_format}-->
-
-<!--{strip}-->
-                                        <!--{if $arrProduct.price02_min_inctax == $arrProduct.price02_max_inctax}-->
-                                            <!--{$arrProduct.price02_min_inctax|n2s}-->
-                                        <!--{else}-->
-                                            <!--{$arrProduct.price02_min_inctax|n2s}-->～<!--{$arrProduct.price02_max_inctax|n2s}-->
-                                        <!--{/if}-->
-                                    <!--{/strip}--></span><span id="price02_dynamic"></span>
-                                    円
-                                </dd>
-                            </dl>
+                            <dl class="sale_price">
+   <dt><!--{$smarty.const.SALE_PRICE_TITLE}-->(税込)：</dt>
+   <dd class="price">
+     <span id="price02_default"><!--{strip}-->
+       <!--{if $arrProduct.price02_min_inctax == $arrProduct.price02_max_inctax}-->
+         <!--{$arrProduct.price02_min_inctax|number_format}-->
+       <!--{else}-->
+         <!--{$arrProduct.price02_min_inctax|number_format}-->～<!--{$arrProduct.price02_max_inctax|number_format}-->
+       <!--{/if}-->
+     <!--{/strip}--></span><span id="price02_dynamic"></span>
+     円（税抜：<span id="price021_default"><!--{$arrProduct.price02_min|number_format}--></span><span id="price021_dynamic"></span>円）
+ </dd>
+</dl>
 
                         </div>
 
