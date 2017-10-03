@@ -107,7 +107,12 @@
                             <dl class="sale_price dl-horizontal">
                                 <dt><!--{$smarty.const.SALE_PRICE_TITLE}-->(税込)：</dt>
                                 <dd class="price">
-                                    <span id="price02_default"><!--{strip}-->
+                                    <span id="price02_default">
+
+                                      <!--{assign var=tax_price value=$arrProduct.price02_min_inctax-$arrProduct.price02_min}-->
+<!--{$tax_price|number_format}-->
+
+<!--{strip}-->
                                         <!--{if $arrProduct.price02_min_inctax == $arrProduct.price02_max_inctax}-->
                                             <!--{$arrProduct.price02_min_inctax|n2s}-->
                                         <!--{else}-->

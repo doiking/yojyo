@@ -183,6 +183,7 @@
                             </span><span id="price02_dynamic_<!--{$id}-->"></span><!--{/strip}-->
                             円</span>
                     </div>
+          
 
                     <!--★コメント★-->
                     <div class="listcomment"><!--{$arrProduct.main_list_comment|h|nl2br}--></div>
