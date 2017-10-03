@@ -1,0 +1,70 @@
+2017/08/22 21:18:15 [/ecmng/ownersstore/index.php] Tetra_FotterGuide install: start from 27.142.129.53
+2017/08/22 21:18:15 [/ecmng/ownersstore/index.php] Tetra_FotterGuide install: end from 27.142.129.53
+2017/08/22 21:18:23 [/ecmng/ownersstore/index.php] Tetra_NewProducts_Side install: start from 27.142.129.53
+2017/08/22 21:18:23 [/ecmng/ownersstore/index.php] Tetra_NewProducts_Side install: end from 27.142.129.53
+2017/08/22 21:18:30 [/ecmng/ownersstore/index.php] Tetra_NewProducts install: start from 27.142.129.53
+2017/08/22 21:18:30 [/ecmng/ownersstore/index.php] Tetra_NewProducts install: end from 27.142.129.53
+2017/08/22 21:18:37 [/ecmng/ownersstore/index.php] Tetra_SearchBar install: start from 27.142.129.53
+2017/08/22 21:18:37 [/ecmng/ownersstore/index.php] Tetra_SearchBar install: end from 27.142.129.53
+2017/08/22 21:18:48 [/ecmng/ownersstore/index.php] Tetra_SellRanking_Side install: start from 27.142.129.53
+2017/08/22 21:18:48 [/ecmng/ownersstore/index.php] Tetra_SellRanking_Side install: end from 27.142.129.53
+2017/08/22 21:18:56 [/ecmng/ownersstore/index.php] Tetra_SellRanking install: start from 27.142.129.53
+2017/08/22 21:18:56 [/ecmng/ownersstore/index.php] Tetra_SellRanking install: end from 27.142.129.53
+2017/08/22 21:19:03 [/ecmng/ownersstore/index.php] Tetra_slider install: start from 27.142.129.53
+2017/08/22 21:19:03 [/ecmng/ownersstore/index.php] Tetra_slider install: end from 27.142.129.53
+2017/08/22 21:19:09 [/ecmng/ownersstore/index.php] Tetra_FotterGuide enable: start from 27.142.129.53
+2017/08/22 21:19:09 [/ecmng/ownersstore/index.php] Tetra_FotterGuide enable: end from 27.142.129.53
+2017/08/22 21:19:15 [/ecmng/ownersstore/index.php] Tetra_NewProducts_Side enable: start from 27.142.129.53
+2017/08/22 21:19:15 [/ecmng/ownersstore/index.php] Tetra_NewProducts_Side enable: end from 27.142.129.53
+2017/08/22 21:19:19 [/ecmng/ownersstore/index.php] Tetra_NewProducts enable: start from 27.142.129.53
+2017/08/22 21:19:19 [/ecmng/ownersstore/index.php] Tetra_NewProducts enable: end from 27.142.129.53
+2017/08/22 21:19:23 [/ecmng/ownersstore/index.php] Tetra_SearchBar enable: start from 27.142.129.53
+2017/08/22 21:19:23 [/ecmng/ownersstore/index.php] Tetra_SearchBar enable: end from 27.142.129.53
+2017/08/22 21:19:27 [/ecmng/ownersstore/index.php] Tetra_SellRanking_Side enable: start from 27.142.129.53
+2017/08/22 21:19:27 [/ecmng/ownersstore/index.php] Tetra_SellRanking_Side enable: end from 27.142.129.53
+2017/08/22 21:19:31 [/ecmng/ownersstore/index.php] Tetra_SellRanking enable: start from 27.142.129.53
+2017/08/22 21:19:31 [/ecmng/ownersstore/index.php] Tetra_SellRanking enable: end from 27.142.129.53
+2017/08/22 21:19:36 [/ecmng/ownersstore/index.php] Tetra_slider enable: start from 27.142.129.53
+2017/08/22 21:19:36 [/ecmng/ownersstore/index.php] Tetra_slider enable: end from 27.142.129.53
+2017/09/07 09:46:56 [/ecmng/ownersstore/index.php] OK:CREATE TABLE plg_dtb_report (
+    id smallint,
+    name text,
+    report_title text,
+    message1 text,
+    message2 text,
+    message3 text,
+    notes1 text,
+    notes2 text,
+    notes3 text,
+    PRIMARY KEY (id)
+) from 153.156.16.131
+2017/09/07 09:46:56 [/ecmng/ownersstore/index.php] OK:
+INSERT INTO plg_dtb_report (id, name, report_title, message1, message2, message3, notes1, notes2, notes3) VALUES (1, '納品書', 'お買上げ明細書(納品書)','このたびはお買上げいただきありがとうございます。', '下記の内容にて納品させていただきます。', 'ご確認くださいますよう、お願いいたします。', '', '', '') from 153.156.16.131
+2017/09/07 09:46:56 [/ecmng/ownersstore/index.php] OK:
+INSERT INTO plg_dtb_report (id, name, report_title, message1, message2, message3, notes1, notes2, notes3) VALUES (2, 'ピッキングリスト', 'お買上げ明細書(ピッキングリスト)','いつもお世話になっております。', '以下商品をピッキング頂きますよう', 'よろしくお願いいたします。', '株式会社＊＊＊＊様', '', '') from 153.156.16.131
+2017/09/07 09:46:56 [/ecmng/ownersstore/index.php] MultiReportPlugin install: start from 153.156.16.131
+2017/09/07 09:46:56 [/ecmng/ownersstore/index.php] MultiReportPlugin install: end from 153.156.16.131
+2017/09/07 09:47:07 [/ecmng/ownersstore/index.php] MultiReportPlugin enable: start from 153.156.16.131
+2017/09/07 09:47:07 [/ecmng/ownersstore/index.php] MultiReportPlugin enable: end from 153.156.16.131
+2017/09/07 09:55:55 [/ecmng/ownersstore/index.php] CheckedItems install: start from 153.156.16.131
+2017/09/07 09:55:55 [/ecmng/ownersstore/index.php] CheckedItems install: end from 153.156.16.131
+2017/09/07 09:56:06 [/ecmng/ownersstore/index.php] CheckedItems enable: start from 153.156.16.131
+2017/09/07 09:56:06 [/ecmng/ownersstore/index.php] CheckedItems enable: end from 153.156.16.131
+2017/09/12 09:48:44 [/ecmng/ownersstore/index.php] ChangePDFLogo install: start from 153.156.16.131
+2017/09/12 09:48:44 [/ecmng/ownersstore/index.php] ChangePDFLogo install: end from 153.156.16.131
+2017/09/12 09:50:13 [/ecmng/ownersstore/index.php] ChangePDFLogo enable: start from 153.156.16.131
+2017/09/12 09:50:13 [/ecmng/ownersstore/index.php] ChangePDFLogo enable: end from 153.156.16.131
+2017/09/12 10:06:39 [/ecmng/ownersstore/index.php] ChangePDFLogo disable: start from 153.156.16.131
+2017/09/12 10:06:39 [/ecmng/ownersstore/index.php] ChangePDFLogo disable: end from 153.156.16.131
+2017/09/12 10:06:50 [/ecmng/ownersstore/index.php] MultiReportPlugin disable: start from 153.156.16.131
+2017/09/12 10:06:50 [/ecmng/ownersstore/index.php] MultiReportPlugin disable: end from 153.156.16.131
+2017/09/12 10:07:50 [/ecmng/ownersstore/index.php] MultiReportPlugin enable: start from 153.156.16.131
+2017/09/12 10:07:50 [/ecmng/ownersstore/index.php] MultiReportPlugin enable: end from 153.156.16.131
+2017/09/12 10:07:55 [/ecmng/ownersstore/index.php] ChangePDFLogo enable: start from 153.156.16.131
+2017/09/12 10:07:55 [/ecmng/ownersstore/index.php] ChangePDFLogo enable: end from 153.156.16.131
+2017/09/12 10:08:22 [/ecmng/ownersstore/index.php] ChangePDFLogo enable: start from 153.156.16.131
+2017/09/12 10:08:22 [/ecmng/ownersstore/index.php] ChangePDFLogo enable: end from 153.156.16.131
+2017/09/22 08:29:41 [/ecmng/ownersstore/index.php] CustomTradelaw install: start from 153.156.16.131
+2017/09/22 08:29:41 [/ecmng/ownersstore/index.php] CustomTradelaw install: end from 153.156.16.131
+2017/09/22 08:29:48 [/ecmng/ownersstore/index.php] CustomTradelaw enable: start from 153.156.16.131
+2017/09/22 08:29:48 [/ecmng/ownersstore/index.php] CustomTradelaw enable: end from 153.156.16.131

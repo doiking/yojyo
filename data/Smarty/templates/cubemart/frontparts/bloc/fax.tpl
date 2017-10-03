@@ -1,0 +1,1 @@
+<a href="https://yojyo.jp/user_data/files/faxorder.pdf" target="_blank"><img src="https://yojyo.jp/user_data/images/faxbanner.jpg"></a>

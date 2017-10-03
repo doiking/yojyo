@@ -1,0 +1,6 @@
+61	楽天Edy
+62	楽天Edy(おサイフケータイ)
+63	Suicaインターネットサービス
+64	モバイルSuica
+65	WAON
+66	モバイルWAON／モバイル JMB WAON

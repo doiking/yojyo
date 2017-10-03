@@ -1,0 +1,1 @@
+DROP TABLE plg_dtb_report;
