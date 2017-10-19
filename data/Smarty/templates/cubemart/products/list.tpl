@@ -214,18 +214,6 @@ $('div#undercolumn form[name^="product_form"], body.LC_Page_Products_Detail #for
         </span><span id="price02_dynamic_<!--{$id}-->"></span><!--{/strip}-->
         円</span>
 </div>
-<div class="pricebox sale_price sale_price_noinctax">
-    <!--{$smarty.const.SALE_PRICE_TITLE}-->(税抜)：
-    <span class="price">
-        <span id="price02no_default_<!--{$id}-->"><!--{strip}-->
-            <!--{if $arrProduct.price02_min == $arrProduct.price02_max}-->
-                <!--{$arrProduct.price02_min|number_format}-->
-            <!--{else}-->
-                <!--{$arrProduct.price02_min|number_format}-->～<!--{$arrProduct.price02_max|number_format}-->
-            <!--{/if}-->
-        </span><span id="price02no_dynamic_<!--{$id}-->"></span><!--{/strip}-->
-        円</span>
-</div>
 
                             <!--★コメント★-->
                             <div class="listcomment"><!--{$arrProduct.main_list_comment|h|nl2br}--></div>
