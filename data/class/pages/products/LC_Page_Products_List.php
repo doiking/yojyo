@@ -392,13 +392,14 @@ class LC_Page_Products_List extends LC_Page_Ex
         $names = preg_split('/ +/', $name);
         // 分割したキーワードを一つずつwhere文に追加
         foreach ($names as $val) {
-if (strlen($val) > 0) {
-$searchCondition[‘where’] .= ‘ AND ( alldtl.name ILIKE ? OR alldtl.comment3 ILIKE ? OR product_id IN (SELECT product_id FROM dtb_products_class WHERE product_code ILIKE ? AND del_flg = 0) ) ‘;
-$searchCondition[‘arrval’][] = “%$val%”;
-$searchCondition[‘arrval’][] = “%$val%”;
-$searchCondition[‘arrval’][] = “%$val%”;
-}
-}
+        if (strlen($val) > 0) {
+        $searchCondition['where'] .= ' AND ( alldtl.name ILIKE ? OR alldtl.comment3 ILIKE ? OR product_id IN (SELECT product_id FROM dtb_products_class WHERE product_code ILIKE ? AND del_flg = 0) ) ';
+        $searchCondition['arrval'][] = "%$val%";
+        $searchCondition['arrval'][] = "%$val%";
+        $searchCondition['arrval'][] = "%$val%";
+
+        }
+        }
 
         // メーカーらのWHERE文字列取得
         if ($arrSearchData['maker_id']) {
