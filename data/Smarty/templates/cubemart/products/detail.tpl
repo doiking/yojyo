@@ -52,6 +52,7 @@
                             </a>
                         <!--{/if}-->
                     </div>
+
                     <!--{if $arrProduct.main_large_image|strlen >= 1}-->
                         <span class="mini">
                                 <!--★拡大する★-->
@@ -63,6 +64,24 @@
                                     画像を拡大する</a>
                         </span>
                     <!--{/if}-->
+  <div class="photo list-image">
+<!--{* サブ画像 *}-->
+<!--{section name=cnt loop=$smarty.const.PRODUCTSUB_MAX}-->
+<!--{assign var=key1 value="sub_title`$smarty.section.cnt.iteration`"}-->
+<!--{assign var=key2 value="sub_image`$smarty.section.cnt.iteration`"}-->
+<!--{if $arrProduct.$key2 != ''}-->
+<a
+    href="<!--{$smarty.const.ROOT_URLPATH}-->resize_image.php?image=<!--{$arrProduct.$key2|h|nl2br}-->"
+    class="expansion"
+    target="_blank"
+>
+<img src="<!--{$smarty.const.ROOT_URLPATH}-->resize_image.php?image=<!--{$arrProduct.$key2|h|nl2br}-->"  width="<!--{$arrFile[$key].width}-->" height="<!--{$arrFile[$key].height}-->" alt="<!--{$arrProduct.$key1|h}-->" class="picture img-responsive"/>
+</a>
+
+<!--{/if}-->
+<!--{/section}-->
+</div>
+
                 </div>
 
                 <div id="detailrightbloc" class="col-sm-7 col-right">
