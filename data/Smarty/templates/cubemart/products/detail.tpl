@@ -53,17 +53,7 @@
                         <!--{/if}-->
                     </div>
 
-                    <!--{if $arrProduct.main_large_image|strlen >= 1}-->
-                        <span class="mini">
-                                <!--★拡大する★-->
-                                <a
-                                    href="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrProduct.main_large_image|h}-->"
-                                    class="expansion"
-                                    target="_blank"
-                                >
-                                    画像を拡大する</a>
-                        </span>
-                    <!--{/if}-->
+              
   <div class="photo list-image">
 <!--{* サブ画像 *}-->
 <!--{section name=cnt loop=$smarty.const.PRODUCTSUB_MAX}-->
@@ -325,62 +315,6 @@
 
     <!--詳細ここまで-->
 
-    <!--▼サブコメント-->
-    <div id="subcomment_area">
-        <div class="ui-headline section-title">
-            <h2 class="title">商品の特徴
-                <!--{*
-                * ここに画像を使うときはコメントアウトを解除
-                * <img src="<!--{$TPL_URLPATH}-->img/title/tit_product_voice.png" alt="この商品に対するお客様の声" />
-                *}-->
-            </h2>
-        </div>
-        <!--{section name=cnt loop=$smarty.const.PRODUCTSUB_MAX}-->
-            <!--{assign var=key value="sub_title`$smarty.section.cnt.index+1`"}-->
-            <!--{assign var=ikey value="sub_image`$smarty.section.cnt.index+1`"}-->
-            <!--{if $arrProduct[$key] != "" or $arrProduct[$ikey]|strlen >= 1}-->
-                <div class="sub_area ui-list">
-                    <!--{assign var=ckey value="sub_comment`$smarty.section.cnt.index+1`"}-->
-                    <div class="row">
-                        <!--▼サブ画像-->
-                        <!--{assign var=lkey value="sub_large_image`$smarty.section.cnt.index+1`"}-->
-                        <!--{if $arrProduct[$ikey]|strlen >= 1}-->
-                            <div class="col-xs-4 col-left">
-                                <div class="subphotoimg list-image">
-                                    <!--{if $arrProduct[$lkey]|strlen >= 1}-->
-                                        <a href="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrProduct[$lkey]|h}-->" class="expansion" target="_blank" >
-                                    <!--{/if}-->
-                                            <img src="<!--{$arrFile[$ikey].filepath}-->" alt="<!--{$arrProduct.name|h}-->" width="<!--{$arrFile[$ikey].width}-->" height="<!--{$arrFile[$ikey].height}-->" class="img-responsive" />
-                                    <!--{if $arrProduct[$lkey]|strlen >= 1}-->
-                                        </a>
-                                        <span class="mini">
-                                            <a href="<!--{$smarty.const.IMAGE_SAVE_URLPATH}--><!--{$arrProduct[$lkey]|h}-->" class="expansion" target="_blank">
-                                                画像を拡大する</a>
-                                        </span>
-                                    <!--{/if}-->
-                                </div>
-                            </div>
-                            <div class="col-xs-8 col-right">
-                                <div class="ui-headline sub-title">
-                                    <h3 class="title"><!--★サブタイトル★--><!--{$arrProduct[$key]|h}--></h3>
-                                </div>
-                                <div class="subtext"><!--★サブテキスト★--><!--{$arrProduct[$ckey]|nl2br_html}--></div>
-                            </div>
-                        <!--{else}-->
-                            <div class="col-xs-12">
-                                <div class="ui-headline sub-title">
-                                    <h3 class="title"><!--★サブタイトル★--><!--{$arrProduct[$key]|h}--></h3>
-                                </div>
-                                <p class="subtext"><!--★サブテキスト★--><!--{$arrProduct[$ckey]|nl2br_html}--></p>
-                            </div>
-                        <!--{/if}-->
-                        <!--▲サブ画像-->
-                    </div>
-                </div>
-            <!--{/if}-->
-        <!--{/section}-->
-    </div>
-    <!--▲サブコメント-->
 
     <!--この商品に対するお客様の声-->
     <div id="customervoice_area">
