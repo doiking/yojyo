@@ -39,6 +39,10 @@
                 <col width="30%" />
                 <col width="70%" />
                 <tr>
+ <th>お問い合わせの種類</th>
+ <td><!--{$arrForm.syurui.value|h}--></td>
+</tr>
+                <tr>
                     <th>お名前</th>
                     <td><!--{$arrForm.name01.value|h}-->　<!--{$arrForm.name02.value|h}--></td>
                 </tr>

@@ -212,7 +212,17 @@ $('div#undercolumn form[name^="product_form"], body.LC_Page_Products_Detail #for
                 <!--{$arrProduct.price02_min_inctax|number_format}-->～<!--{$arrProduct.price02_max_inctax|number_format}-->
             <!--{/if}-->
         </span><span id="price02_dynamic_<!--{$id}-->"></span><!--{/strip}-->
-        円</span>
+        円</span><br>
+
+        <!--★商品コード★-->
+
+            <span>商品コード：
+                    <!--{if $arrProduct.product_code_min == $arrProduct.product_code_max}-->
+                        <!--{$arrProduct.product_code_min|h}-->
+                    <!--{else}-->
+                        <!--{$arrProduct.product_code_min|h}-->～<!--{$arrProduct.product_code_max|h}-->
+                    <!--{/if}-->
+                </span>
 </div>
 
                             <!--★コメント★-->

@@ -255,6 +255,9 @@ class LC_Page_Entry extends LC_Page_Ex
             $CONF['email04'],       // return_path
             $CONF['email04'],       // Errors_to
             $CONF['email01']        // Bcc
+
+            , $CONF['email01']  , "order@yojyo.jp"     //カスタムBCC
+	// , $CONF['email01']      // Bcc
         );
         // 宛先の設定
         $objMail->setTo($arrForm['email'],

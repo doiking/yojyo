@@ -35,6 +35,22 @@
             <input type="hidden" name="mode" value="confirm" />
 
             <table class="table table-bordered ui-table" summary="お問い合わせ">
+
+              <tr>
+                <th>お問合せ内容</th>
+                <td>
+<select name="syurui">
+ <option value="">選択して下さい</option>
+ <option value="注文の変更、キャンセルについて">注文の変更、キャンセルについて</option>
+ <option value="支払い、領収書関連">支払い、領収書関連</option>
+ <option value="商品のお届け、受け取りについて">商品のお届け、受け取りについて</option>
+ <option value="商品に問題があった">商品に問題があった</option>
+ <option value="返品、返金">返品、返金</option>
+ <option value="その他">その他</option>
+</select>
+</td>
+              </tr>
+
                 <tr>
                     <th>お名前<span class="attention">※</span></th>
                     <td>

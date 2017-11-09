@@ -39,6 +39,7 @@
 以下のお問い合わせを受付致しました。
 確認次第ご連絡いたしますので、少々お待ちください。
 
+■お問い合わせの種類：<!--{$arrForm.syurui.value}-->
 ■お名前　：<!--{$arrForm.name01.value}--> <!--{$arrForm.name02.value}--> (<!--{$arrForm.kana01.value}--> <!--{$arrForm.kana02.value}-->) 様
 ■郵便番号：<!--{if $arrForm.zip01.value && $arrForm.zip02.value}-->〒<!--{$arrForm.zip01.value}-->-<!--{$arrForm.zip02.value}--><!--{/if}-->
 

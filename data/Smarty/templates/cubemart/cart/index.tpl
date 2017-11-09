@@ -86,7 +86,7 @@
                             <!--{/if}-->
                         </p>
 
-                        <div class="table-responsive">
+                        <div>
                             <table class="table table-bordered ui-table" summary="商品情報">
                                 <col width="10%" />
                                 <col width="15%" />
